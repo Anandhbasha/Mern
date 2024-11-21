@@ -89,3 +89,69 @@ else{
     console.log("Not a even number");
     
 }
+
+//parameters ternary >==,switch , for of ,in
+
+
+
+// function greet(x,y){
+//     console.log(x+y);
+//     }
+// greet(5,10);
+
+let age = 12;
+console.log(age>=18 ? "is Adult" : "Not an Adult");
+
+
+//switch case
+
+switch (age) {
+    case 10:
+        console.log("Not an adult");        
+        break;
+        case 18:
+            console.log("is an adult");        
+        break;
+    default:
+        console.log("Not");  
+        break;
+}
+
+
+//for in loop
+
+let arr = ["blue", "red","green","yellow"]
+
+let person = {
+    name:"Azar",
+    age:20,
+    gender:"Male",
+    isAlive:true,
+    siblings:{
+        brother:"Anaz",
+        sister:"aysha"
+    }
+}
+
+//Number,Boolean, Undifined,String,Nan,array,object,function,
+let b;
+console.log(typeof(person.age));
+
+
+
+for(let i=0;i<arr.length;i++){
+
+}
+
+for (const key in arr) {
+        const element = arr[key];
+        console.log(element);
+        
+        
+}
+
+
+for (const key of arr) {
+    console.log(key);
+    
+}
