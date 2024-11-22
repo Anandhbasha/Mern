@@ -105,53 +105,88 @@ console.log(age>=18 ? "is Adult" : "Not an Adult");
 
 //switch case
 
-switch (age) {
-    case 10:
-        console.log("Not an adult");        
-        break;
-        case 18:
-            console.log("is an adult");        
-        break;
-    default:
-        console.log("Not");  
-        break;
-}
+// switch (age) {
+//     case 10:
+//         console.log("Not an adult");        
+//         break;
+//         case 18:
+//             console.log("is an adult");        
+//         break;
+//     default:
+//         console.log("Not");  
+//         break;
+// }
 
 
-//for in loop
+// //for in loop
 
-let arr = ["blue", "red","green","yellow"]
+// let arr = ["blue", "red","green","yellow"]
 
-let person = {
-    name:"Azar",
-    age:20,
-    gender:"Male",
-    isAlive:true,
-    siblings:{
-        brother:"Anaz",
-        sister:"aysha"
-    }
-}
+// let person = {
+//     name:"Azar",
+//     age:20,
+//     gender:"Male",
+//     isAlive:true,
+//     siblings:{
+//         brother:"Anaz",
+//         sister:"aysha"
+//     }
+// }
 
-//Number,Boolean, Undifined,String,Nan,array,object,function,
-let b;
-console.log(typeof(person.age));
+// //Number,Boolean, Undifined,String,Nan,array,object,function,
+// let b;
+// console.log(typeof(person.age));
 
 
 
-for(let i=0;i<arr.length;i++){
+// for(let i=0;i<arr.length;i++){
 
-}
+// }
 
-for (const key in arr) {
-        const element = arr[key];
-        console.log(element);
+// for (const key in arr) {
+//         const element = arr[key];
+//         console.log(element);
         
         
-}
+// }
 
 
-for (const key of arr) {
-    console.log(key);
+// for (const key of arr) {
+//     console.log(key);
     
-}
+// }
+
+//Spread and Rest Operators,MRF,Template Literals,Promises,Async/Await,Error Handling,
+
+//Map Method
+const numbers = [1,2,3,4,5,6];
+const users = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" }
+  ];
+
+const maps = numbers.map(item=>console.log(item))
+const mapuser = users.map(x=>console.log(x.name));
+
+
+// function names(){
+
+// }
+// //arrow function
+// //map(x =>{}) 
+
+// //filter
+// numbers.filter(x =>{
+//     const even = x/2==0;
+//     console.log(even);
+    
+// })
+
+
+//reduce
+const new_var = numbers.reduce((acc,x) =>acc+x,0)
+console.log(new_var);
+
+
+//numbers.reduce((acc,x) =>console.log(acc+x,0))
