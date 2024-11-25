@@ -156,8 +156,7 @@ console.log(age>=18 ? "is Adult" : "Not an Adult");
     
 // }
 
-//Spread and Rest Operators,MRF,Template Literals,Promises,Async/Await,Error Handling,
-
+//MRF,Template Literals
 //Map Method
 const numbers = [1,2,3,4,5,6];
 const users = [
@@ -165,11 +164,14 @@ const users = [
     { id: 2, name: "Bob" },
     { id: 3, name: "Charlie" }
   ];
-
-const maps = numbers.map(item=>console.log(item))
-const mapuser = users.map(x=>console.log(x.name));
-
-
+  
+const maps = numbers.map(item=> console.log(item));
+const mapuser = users.map(x=>console.log(`Name is ${x.name}`));
+//Filter
+const fill = numbers.filter(x =>{
+    console.log(x%2==0);
+    
+})
 // function names(){
 
 // }
@@ -185,8 +187,113 @@ const mapuser = users.map(x=>console.log(x.name));
 
 
 //reduce
-const new_var = numbers.reduce((acc,x) =>acc+x,0)
-console.log(new_var);
+const new_var = numbers.reduce((acc,x) =>acc+x,0) ;console.log(new_var);
+//Rest Operators
+// const[num1,num2,...nums] = numbers;
+// console.log("First Value:" + num1);
+// console.log("Second Value:" +num2);
+// console.log("Third Value:" +nums);
 
+//Spread Operators
+// const new_num = [10,20,30,...numbers];
+// console.log(new_num);
+// //Slice()
+//     const sep = numbers.slice(3)
+//     console.log(sep);
+    
+// //Template Literals
+//  function name(params) {
+    
+//  }
+//  const arrow = (()=>{
 
-//numbers.reduce((acc,x) =>console.log(acc+x,0))
+//  })
+//  //anonoums Function
+//  const ana = function name() {
+    
+//  }
+  
+ //IFFI
+//Promises
+   
+    const ticket = new Promise ((resolve,reject)=>{
+        let confirmed = true;
+        if(confirmed){
+            resolve(220);
+        }
+        else{
+            reject();
+        }
+    })
+    ticket.then((amount)=>{
+        console.log("Ticked Booked Succesfully You have to Pay" + amount);
+        
+    }).catch(()=>{
+        console.log("Failure");
+    })
+
+    const friend1 = new Promise ((resolve,reject)=>{
+        let status = true;
+        if(status){
+            resolve("I am reached Home: xyz");
+        }
+        else{
+            setTimeout(()=>{
+                reject("He is Not Reached: xyz");                
+            },5000);
+        }
+    })
+    const friend2 = new Promise ((resolve,reject)=>{
+        let status = true;
+        if(status){
+            setTimeout(()=>{
+                resolve("I am reached Home: abc");;                
+            },1000);
+        }
+        else{
+            reject("He is Not Reached: abc")
+        }
+    })
+    const friend3 = new Promise ((resolve,reject)=>{
+        let status = false;
+        if(status){
+            setTimeout(()=>{
+                resolve("I am reached Home: 123");               
+            },10000);
+        }
+        else{
+            reject("He is Not Reached: 123")
+        }
+    })
+
+    setTimeout(()=>{
+        console.log("Hello");
+        
+    },5000);
+
+    friend3.then(()=>{
+
+    })
+    Promise.allSettled([friend1,friend2,friend3]).then((message)=>{
+        console.log(message);        
+    }).catch((err)=>{
+        console.log(err);
+        
+    })
+//Async/Await
+async function name() {
+    try{
+        states = await friend3
+        console.log("Hello");
+        console.log(states);        
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+name();
+//Error Handling
+//try,catch
+//then,catch
+//fetch api????
+
