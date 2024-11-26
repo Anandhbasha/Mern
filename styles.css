@@ -3,9 +3,20 @@
     border: 1px solid black;
     padding: 10px;
 }
+.Home{
+    background: linear-gradient(to right, rgb(7, 6, 6), #1010010d, #000000f0), url(./Images/OIP.jpg) no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+}
+.testing{
+    z-index: 1;
+}
+
+
 .card{
     width: 200px;
-    height: 300px;
+    height: 330px;
     border: 1px solid blue;
     text-align: center;
 }
