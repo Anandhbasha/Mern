@@ -323,18 +323,17 @@ function calculateAverage(...scores) { // Rest Operator
     return total / scores.length;
 }
 
-// 4. If Statement
+// 4. For Loop to Log Scores
+console.log(`Scores of ${student1.name}:`);
+for (let i = 0; i < student1.scores.length; i++) {
+    console.log(`Test ${i + 1}: ${student1.scores[i]}`);
+}
+// 5. If Statement
 const averageScore = calculateAverage(...student1.scores); // Spread Operator
 if (averageScore >= 50) {
     console.log(`${student1.name} has passed with an average score of ${averageScore}`);
 } else {
     console.log(`${student1.name} has failed.`);
-}
-
-// 5. For Loop to Log Scores
-console.log(`Scores of ${student1.name}:`);
-for (let i = 0; i < student1.scores.length; i++) {
-    console.log(`Test ${i + 1}: ${student1.scores[i]}`);
 }
 
 // 6. Array of Students
@@ -344,8 +343,36 @@ const students = [
     { name: "Alex", scores: [90, 88, 84] }
 ];
 
-// 7. Switch Case for Grades
+
+
+// 7. Looping with For In & For Of
+for (const student of students) { // For Of
+    console.log(`Details of ${student.name}:`);
+    for (const key in student) { // For In
+        console.log(`${key}: ${student[key]}`);
+    }
+}
+
+// 8. Map, Filter, and Reduce Methods
+const reports = students.map(student => {
+    const avg = calculateAverage(...student.scores);
+    console.log(student);
+    
+    return {
+        ...student,
+        average: avg,
+        grade: assignGrade(avg)
+    };
+});
+console.log("Reports:", reports);
+
+
+// 9. Switch Case for Grades
+
 function assignGrade(score) {
+    //80
+    //90
+    //50
     switch (true) {
         case score >= 90: return "A";
         case score >= 80: return "B";
@@ -354,25 +381,6 @@ function assignGrade(score) {
         default: return "F";
     }
 }
-
-// 8. Looping with For In & For Of
-for (const student of students) { // For Of
-    console.log(`Details of ${student.name}:`);
-    for (const key in student) { // For In
-        console.log(`${key}: ${student[key]}`);
-    }
-}
-
-// 9. Map, Filter, and Reduce Methods
-const reports = students.map(student => {
-    const avg = calculateAverage(...student.scores);
-    return {
-        ...student,
-        average: avg,
-        grade: assignGrade(avg)
-    };
-});
-console.log("Reports:", reports);
 
 const passedStudents = reports.filter(student => student.average >= 50);
 console.log("Passed Students:", passedStudents);
