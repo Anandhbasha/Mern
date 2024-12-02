@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Card{
+            width: 250px;
+            height: 400px;
+            border: 1px solid #000;
+        }
+        .Card_Top{
+            width: 100%;
+            height: 300px;
+            border: 1px solid blue;
+        }
+        .Product_Top{
+            height: 50px;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .Product_Image{
+            width: 100%;
+            height: 200px;
+            background-color: red;
+        }
+        .Product_addBtn > button{
+            width: 100%;
+            padding: 15px;
+        }
+        .Card_Bottom{
+            height: 100px;
+        }
+        .Product_name{
+            height: 50%;
+            background-color: blueviolet;
+        }
+        .Product_Price{
+            height: 50%;
+            background-color: yellowgreen;
+        }
+        .Product_offer{
+            width: 50px;
+            height: 35px;
+            border: 5px solid red;
+        }
+        .Product_Delete{
+            width: 50px;
+            height: 35px;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section class="main">
+        <div class="Card">
+            <div class="Card_Top">
+                <div class="Product_Top">
+                    <div class="Product_offer"></div>
+                    <div class="Product_Delete"></div>
+                </div>
+                <div class="Product_Image"></div>
+                <div class="Product_addBtn">
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="Card_Bottom">
+                <div class="Product_name"></div>
+                <div class="Product_Price"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

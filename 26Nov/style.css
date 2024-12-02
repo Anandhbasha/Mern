@@ -40,29 +40,40 @@ body{
 .top_Right > i{
     color: white;
 }
-.card{
-    width: 300px;
-    height: 490px;
-    margin-top: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.card_Top{
-    width: 300px;
-    height: 300px;
-}
-.card_Top > img{
+.Courses{
     width: 100%;
-    height: 100%;
-    /* border-radius: 10px 10px 0px 0px;     */
+    height: 100vh;
+    margin: 50px;
+    color: antiquewhite;
+    /* background-image: url(./../Images/OIP.jpg);
+    background-repeat: no-repeat; */
+    /* background: linear-gradient(#ff00001c, yellow),url(./../Images/OIP.jpg) no-repeat; */
+    background-size: contain;
+    transform: translateY(100px);
+    
 }
-.card_Bottom{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    row-gap: 10px;
-    background-color: red;
-    color: white;
-    /* border-radius: 0px 0px 10px 10px;  */
+.btn{
+    padding: 10px 15px;
+    border-radius: 5px 10px;
 }
 
+.Card{
+    width: 300px;
+    height: 478px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.card_top{
+    width: 300px;
+    height: 250px;
+}
+
+/* .card_top > img{
+    width: 100%;
+    height: 100%;
+} */
+.card_Bottom,.card_Title{
+    padding: 15px;
+    background-color: #8e3939;
+    color: white;
+}

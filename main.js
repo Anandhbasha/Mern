@@ -302,106 +302,120 @@
 //HomeWork
 
 // 1. Hoisting Example
-console.log("Task is starting...");
-var taskName = "Student Performance Tracker";
-showWelcomeMessage();
-function showWelcomeMessage() {
-    console.log(`Welcome to the ${taskName}`);
-}
+// console.log("Task is starting...");
+// var taskName = "Student Performance Tracker";
+// showWelcomeMessage();
+// function showWelcomeMessage() {
+//     console.log(`Welcome to the ${taskName}`);
+// }
 
-// 2. Student Object
-const student1 = {
-    name: "John",
-    age: 16,
-    rollNumber: 101,
-    scores: [85, 78, 92]
-};
+// // 2. Student Object
+// const student1 = {
+//     name: "John",
+//     age: 16,
+//     rollNumber: 101,
+//     scores: [85, 78, 92]
+// };
 
-// 3. Function to Calculate Average
-function calculateAverage(...scores) { // Rest Operator
-    const total = scores.reduce((sum, score) => sum + score, 0); // Reduce
-    return total / scores.length;
-}
+// // 3. Function to Calculate Average
+// function calculateAverage(...scores) { // Rest Operator
+//     const total = scores.reduce((sum, score) => sum + score, 0); // Reduce
+//     return total / scores.length;
+// }
 
-// 4. For Loop to Log Scores
-console.log(`Scores of ${student1.name}:`);
-for (let i = 0; i < student1.scores.length; i++) {
-    console.log(`Test ${i + 1}: ${student1.scores[i]}`);
-}
-// 5. If Statement
-const averageScore = calculateAverage(...student1.scores); // Spread Operator
-if (averageScore >= 50) {
-    console.log(`${student1.name} has passed with an average score of ${averageScore}`);
-} else {
-    console.log(`${student1.name} has failed.`);
-}
+// // 4. For Loop to Log Scores
+// console.log(`Scores of ${student1.name}:`);
+// for (let i = 0; i < student1.scores.length; i++) {
+//     console.log(`Test ${i + 1}: ${student1.scores[i]}`);
+// }
+// // 5. If Statement
+// const averageScore = calculateAverage(...student1.scores); // Spread Operator
+// if (averageScore >= 50) {
+//     console.log(`${student1.name} has passed with an average score of ${averageScore}`);
+// } else {
+//     console.log(`${student1.name} has failed.`);
+// }
 
-// 6. Array of Students
-const students = [
-    { name: "John", scores: [85, 78, 92] },
-    { name: "Jane", scores: [45, 55, 65] },
-    { name: "Alex", scores: [90, 88, 84] }
-];
+// // 6. Array of Students
+// const students = [
+//     { name: "John", scores: [85, 78, 92] },
+//     { name: "Jane", scores: [45, 55, 65] },
+//     { name: "Alex", scores: [90, 88, 84] }
+// ];
 
 
 
-// 7. Looping with For In & For Of
-for (const student of students) { // For Of
-    console.log(`Details of ${student.name}:`);
-    for (const key in student) { // For In
-        console.log(`${key}: ${student[key]}`);
-    }
-}
+// // 7. Looping with For In & For Of
+// for (const student of students) { // For Of
+//     console.log(`Details of ${student.name}:`);
+//     for (const key in student) { // For In
+//         console.log(`${key}: ${student[key]}`);
+//     }
+// }
 
-// 8. Map, Filter, and Reduce Methods
-const reports = students.map(student => {
-    const avg = calculateAverage(...student.scores);
-    console.log(student);
+// // 8. Map, Filter, and Reduce Methods
+// const reports = students.map(student => {
+//     const avg = calculateAverage(...student.scores);
+//     console.log(student);
     
-    return {
-        ...student,
-        average: avg,
-        grade: assignGrade(avg)
-    };
-});
-console.log("Reports:", reports);
+//     return {
+//         ...student,
+//         average: avg,
+//         grade: assignGrade(avg)
+//     };
+// });
+// console.log("Reports:", reports);
 
 
-// 9. Switch Case for Grades
+// // 9. Switch Case for Grades
 
-function assignGrade(score) {
-    //80
-    //90
-    //50
-    switch (true) {
-        case score >= 90: return "A";
-        case score >= 80: return "B";
-        case score >= 70: return "C";
-        case score >= 50: return "D";
-        default: return "F";
-    }
+// function assignGrade(score) {
+//     //80
+//     //90
+//     //50
+//     switch (true) {
+//         case score >= 90: return "A";
+//         case score >= 80: return "B";
+//         case score >= 70: return "C";
+//         case score >= 50: return "D";
+//         default: return "F";
+//     }
+// }
+
+// const passedStudents = reports.filter(student => student.average >= 50);
+// console.log("Passed Students:", passedStudents);
+
+// const classAverage = reports.reduce((total, student) => total + student.average, 0) / reports.length;
+// console.log(`Class Average: ${classAverage}`);
+
+// // 10. Promises and Async/Await
+// const fetchData = () => new Promise((resolve, reject) => {
+//     const success = true; // Simulate data fetch
+//     setTimeout(() => {
+//         success ? resolve("Data fetched successfully!") : reject("Failed to fetch data.");
+//     }, 1000);
+// });
+
+// async function processStudentData() {
+//     try {
+//         const message = await fetchData();
+//         console.log(message);
+//     } catch (error) {
+//         console.error("Error:", error);
+//     }
+// }
+// processStudentData();
+
+
+
+
+
+let names = ["a", "m", "e", "e", "r"];
+let name = "";
+for (let i = 0; i < names.length; i++) {
+    name += names[i]; 
+    console.log(name);
 }
 
-const passedStudents = reports.filter(student => student.average >= 50);
-console.log("Passed Students:", passedStudents);
 
-const classAverage = reports.reduce((total, student) => total + student.average, 0) / reports.length;
-console.log(`Class Average: ${classAverage}`);
-
-// 10. Promises and Async/Await
-const fetchData = () => new Promise((resolve, reject) => {
-    const success = true; // Simulate data fetch
-    setTimeout(() => {
-        success ? resolve("Data fetched successfully!") : reject("Failed to fetch data.");
-    }, 1000);
-});
-
-async function processStudentData() {
-    try {
-        const message = await fetchData();
-        console.log(message);
-    } catch (error) {
-        console.error("Error:", error);
-    }
-}
-processStudentData();
+console.log(typeof(name));
